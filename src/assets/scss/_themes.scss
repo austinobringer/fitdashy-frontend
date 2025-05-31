@@ -1,0 +1,29 @@
+// Regular Nunito
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-Medium.ttf') format('truetype');
+}
+
+// Bold Nunito
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('../fonts/Nunito/Nunito-ExtraBold.ttf') format('truetype');
+}
+
+// Theme variables
+body {
+    --font: 'Nunito', sans-serif;
+    --font-bold: 'Nunito-Bold', sans-serif;
+    --primary-clr: #7b39e6;
+    --primary-clr-hvr: #7231db;
+    --primary-clr-active: #6b2cd1;
+    --bg-clr: #161616;
+    --bg-clr2: #101010;
+    --bg-clr2-hvr: #222222;
+    --bg-clr3: #343434;
+    --txt-clr: #FFFFFFDE;
+    --txt-clr2: #c5c5c5de;
+    --txt-clr2-hvr: #a0a0a0de;
+    --txt-clr-bold: #FFFFFF;
+    --select-clr: #41d3ff55;
+}

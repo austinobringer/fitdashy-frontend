@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Small Screen */
+@media screen and (min-width: 0px) {
+    #content {
+        display: none;
+    }
+}
+
+/* Normal Screen */
+@media screen and (min-width: 769px) {
+    #content {
+        display: flex;
+        flex: 1;
+    }
+}
+
+#carousel {
+    flex: 1;
+    display: grid;
+}

@@ -1,0 +1,49 @@
+@use 'mixins' as *;
+
+.header {
+    background-color: var(--primary-clr);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-title {
+    margin: 0px;
+    padding: 5px 10px;
+    color: var(--txt-clr-bold);
+    font-size: 30px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+a {
+    @include button;
+    @include smooth-transition();
+    color: var(--txt-clr-bold);
+    padding-left: 20px;
+    padding-right: 20px;;
+
+    &.active {
+        background-color: var(--primary-clr-active);
+    }
+}
+
+button {
+    @include button;
+    @include smooth-transition();
+}

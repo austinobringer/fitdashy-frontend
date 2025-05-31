@@ -1,0 +1,25 @@
+@use 'themes' as *; // One and only import of the theme variables
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-clr);
+    color: var(--txt-clr);
+    margin: 0px;
+}
+
+a {
+    font-family: var(--font-bold);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bold);
+}
+
+button {
+    font-family: var(--font-bold);
+}
+
+::selection {
+    background: var(--select-clr);
+}

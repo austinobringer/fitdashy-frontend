@@ -1,0 +1,22 @@
+<aside class="sidebar" [class.collapsed]="collapsed">
+    <div class="sidebar-top" (click)="toggleCollapse()">
+        <link rel="preload" as="image" href="https://img.icons8.com/?size=30&id=36389&format=png&color=ffffff">
+        <img *ngIf="collapsed" src="https://img.icons8.com/?size=30&id=36389&format=png&color=ffffff">
+        <link rel="preload" as="image" href="https://img.icons8.com/?size=30&id=7811&format=png&color=ffffff">
+        <img *ngIf="!collapsed" src="https://img.icons8.com/?size=30&id=7811&format=png&color=ffffff">
+    </div>
+    <ng-container *ngFor="let group of groups">
+        <div class="sidebar-group">
+            <div class="sidebar-group-title" *ngIf="group.groupName !== 'Main'">{{ group.groupName }}</div>
+            <ul>
+                <li *ngFor="let link of group.links">
+                    <a [routerLink]="link.route" routerLinkActive="active">
+                        <link rel="preload" as="image" [attr.href]="link.icon">
+                        <img [src]="link.icon" alt="{{link.name}} icon" class="sidebar-icon" />
+                        <span>{{ link.name }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </ng-container>
+</aside>

@@ -1,0 +1,22 @@
+@mixin button {
+    background-color: var(--primary-clr);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    color: var(--txt-clr-bold);
+
+    &:hover {
+        background-color: var(--primary-clr-hvr);
+    }
+    &:active {
+        background-color: var(--primary-clr-active);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+// Mixin for smooth transitions
+@mixin smooth-transition() {
+    transition: all 0.2s ease;
+}

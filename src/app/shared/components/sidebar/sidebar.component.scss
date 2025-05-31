@@ -1,0 +1,91 @@
+@use 'mixins' as *;
+
+.sidebar {
+  width: 175px;
+  height: 100%;
+  background-color: var(--bg-clr2);
+  color: var(--txt-clr-bold);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include smooth-transition();
+
+  &.collapsed {
+    width: 60px;
+    gap: 0px;
+    align-items: center;
+
+    .sidebar-group-title,
+    span {
+      display: none;
+    }
+
+    .sidebar-icon {
+      margin-right: 0;
+    }
+
+    .sidebar-top {
+      justify-content: center;
+    }
+
+    .sidebar-group {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.sidebar-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  @include smooth-transition();
+  
+  &:hover {
+    background-color: var(--bg-clr2-hvr);
+    cursor: pointer;
+  }
+}
+
+.sidebar-group {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.sidebar-group-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 10px 20px;
+  color: var(--txt-clr-bold);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  color: var(--txt-clr-bold);
+  text-decoration: none;
+  padding: 15px 15px;
+  border-radius: 4px;
+  font-size: 18px;
+  @include smooth-transition();
+
+  &.active, &:hover {
+    background-color: var(--bg-clr2-hvr);
+  }
+}
+
+.sidebar-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  @include smooth-transition();
+}
